@@ -11,3 +11,15 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+
+    result = {}
+
+    for num in nums:
+        result[num] = result.get(num, 0) + 1
+
+    max_value = max(result.values())
+
+    for (num, x) in result.items():
+        if x == max_value:
+            return num
+

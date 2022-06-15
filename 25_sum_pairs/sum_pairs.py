@@ -21,3 +21,12 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    for num in nums:
+        for num2 in nums:
+            if num + num2 == goal:
+                return (num, num2)
+    return()
+print(sum_pairs([1, 2, 2, 10], 4))
+print(sum_pairs([4, 2, 10, 5, 1], 6) )
+print(sum_pairs([5, 1, 4, 8, 3, 2], 7)) # 5, 2 should reach goal first, instead of 4,3. Since 5 is the first number/
+print(sum_pairs([11, 20, 4, 2, 1, 5], 100)) 

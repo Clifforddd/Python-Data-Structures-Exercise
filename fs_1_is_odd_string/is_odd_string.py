@@ -27,5 +27,14 @@ def is_odd_string(word):
         >>> is_odd_string('amazing')
         True
     """
-
+    result = 0
     # Hint: you may find the ord() function useful here
+    for i in word:
+        result += ord(i) 
+    
+    return result % 2 == 1
+
+print(is_odd_string('a'))
+print(is_odd_string('amazing'))
+print(is_odd_string('AAaa'))
+print(is_odd_string('aaaa'))

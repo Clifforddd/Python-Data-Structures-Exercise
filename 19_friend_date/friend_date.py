@@ -1,3 +1,7 @@
+elmo = ('Elmo', 5, ['hugging', 'being nice'])
+sauron = ('Sauron', 5000, ['killing hobbits', 'chess'])
+gandalf = ('Gandalf', 10000, ['waving wands', 'chess'])
+
 def friend_date(a, b):
     """Given two friends, do they have any hobbies in common?
 
@@ -16,3 +20,13 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    a = a[2]
+    b = b[2]
+    
+    if set(a) & set(b):
+        return True
+    else:
+        return False
+
+print(friend_date(elmo, sauron))
+print(friend_date(sauron, gandalf))

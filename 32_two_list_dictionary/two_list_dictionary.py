@@ -15,3 +15,9 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+    newDict = dict()
+    for (key, val) in enumerate(keys):
+        newDict[val] = values[key] if key < len(values) else None
+    print(newDict)
+two_list_dictionary(['x', 'y', 'z'], [9, 8, 7])
+two_list_dictionary(['a', 'b', 'c', 'd'], [1, 2, 3])

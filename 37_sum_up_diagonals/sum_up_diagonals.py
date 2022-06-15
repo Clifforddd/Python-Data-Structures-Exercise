@@ -1,3 +1,6 @@
+from cgitb import reset
+
+
 def sum_up_diagonals(matrix):
     """Given a matrix [square list of lists], return sum of diagonals.
 
@@ -18,3 +21,10 @@ def sum_up_diagonals(matrix):
         >>> sum_up_diagonals(m2)
         30
     """
+    result = 0
+
+    for x in range(len(matrix)):
+        result += matrix[x][x]
+        result += matrix[x][-1 - x]
+
+    return result

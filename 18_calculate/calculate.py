@@ -26,3 +26,24 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+    
+    if operation == "add":
+        result = a + b
+        return f"{message} {result}"
+    if operation == "subtract":
+        result = a - b
+        return f"{message} {result}"
+    if operation == "multiply":
+        result = a * b
+        return f"{message} {result}"
+    if operation == "divide":
+        result = a / b
+        return f"{message} {result}"
+    if make_int:
+        result = int(result)
+
+calculate('add', 2.5, 4)
+calculate('subtract', 4, 1.5, make_int=True)
+calculate('multiply', 1.5, 2)
+calculate('divide', 10, 4, message='I got')
+calculate('foo', 2, 3)
